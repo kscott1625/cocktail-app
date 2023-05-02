@@ -1,0 +1,76 @@
+*{
+    padding:0;
+    margin: 0;
+}
+body{
+    background: url(./images/main.jpeg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+h1{
+    color: blanchedalmond;
+    padding-bottom: 30px;
+}
+
+h2, h3, p, ul{
+    color: blanchedalmond;
+}
+.container{
+    text-align: center;
+    margin-top: 40vh;
+  
+}
+input{
+    height:35px;
+    border-radius: 40px;
+    width:15%;
+    color: blue;
+    background-color: rgb(215, 197, 197);
+    padding-left:20px
+}
+
+.drink-btn{
+    width: 70px;
+    height: 30px;
+    border-radius: 40px;
+    margin-left: 10px;
+}
+
+#result img {
+    display:block;
+    max-width: 12.5em;
+    margin: auto;
+}
+
+#result h2:before{
+content:"";
+position: absolute;
+width: 15%;
+height: 3px;
+background-color: blue;
+}
+
+#result ul{
+    margin-bottom: 1em;
+    margin-left: 1.8em;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#result li{
+    margin-bottom: .3em;
+}
+#result p{
+    text-align:justify;
+    font-weight:400 ;
+}
+
+
+
+
+
+
+
+
+
+
