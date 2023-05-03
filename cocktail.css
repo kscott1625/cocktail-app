@@ -3,43 +3,74 @@
     margin: 0;
 }
 body{
+    height: 100%;
+    width: 100%;
     background: url(./images/main.jpeg);
     background-repeat: no-repeat;
     background-size:cover;
 }
 h1{
-    color: blanchedalmond;
+    color: white;
     padding-bottom: 30px;
+    text-shadow: 2px 2px 4px #000000;
+
 }
 
 h2, h3, p, ul{
-    color: blanchedalmond;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+    padding-top: 13px;
+    padding-bottom: 13px;
+
+    font-size: 40px;
+}
+h3{
+    font-size: 20px;
+}
+ul{
+    font-size: 18px;
 }
 .container{
     text-align: center;
-    margin-top: 40vh;
+    margin-top: 20vh;
   
 }
 input{
     height:35px;
     border-radius: 40px;
     width:15%;
-    color: blue;
-    background-color: rgb(215, 197, 197);
+    color: black;
+    font-weight: 500;
+    background-color:antiquewhite;
     padding-left:20px
 }
 
-.drink-btn{
+#drink-btn{
     width: 70px;
     height: 30px;
-    border-radius: 40px;
+    border-radius: 30px;
     margin-left: 10px;
+    background-color: grey;
+    color: blanchedalmond;
+    font-size: large;
 }
+
+.msg{
+    margin: 15px;
+    font-size: 1.9rem;
+}
+
 
 #result img {
     display:block;
-    max-width: 12.5em;
+    max-width: 14.5em;
     margin: auto;
+    padding: 30px;
+    border-radius: 50px;
 }
 
 #result h2:before{
@@ -47,27 +78,41 @@ content:"";
 position: absolute;
 width: 15%;
 height: 3px;
-background-color: blue;
 }
 
 #result ul{
     margin-bottom: 1em;
-    margin-left: 1.8em;
+    margin: .7em;
     display: grid;
-    grid-template-columns: auto auto;
+    /* grid-template-columns: auto auto; */
 }
 
 #result li{
     margin-bottom: .3em;
 }
 #result p{
-    text-align:justify;
+    text-align:center;
+    padding: 20px 80px;
     font-weight:400 ;
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-
-
-
+@media screen and (max-width: 992px) {
+    body{
+    background: url(./images/main.jpeg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 100%;
+    width: 100%;
+}
+}
+@media screen and (max-width: 600px){
+    body{
+    background-color: olive;
+}
+}
 
 
 

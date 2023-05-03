@@ -7,7 +7,7 @@ let getDrink = () => {
   let cocktail = document.getElementById('cocktail-inp').value;
 
   if (cocktail.length == 0) {
-    result.innerHTML = `<h3 class="msg">Please enter cocktail name </h3>`;
+    result.innerHTML = `<h3 class="msg">Please Enter cocktail name </h3>`;
   } else {
     fetch(url + cocktail)
       .then((r) => r.json())
