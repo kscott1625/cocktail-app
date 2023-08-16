@@ -7,19 +7,17 @@ let getDrink = () => {
   let cocktail = document.getElementById('cocktail-inp').value;
 
   if (cocktail.length == 0) {
-    result.innerHTML = `<h3 class="msg">Please Enter cocktail name </h3>`;
+    result.innerHTML = `<h3 class="msg">Please Enter Cocktail Name </h3>`;
   } else {
     fetch(url + cocktail)
       .then((r) => r.json())
       .then((data) => {
-        console.log(data);
-        console.log(data.drinks[0]);
+        // console.log(data);
+        // console.log(data.drinks[0]);
         let myDrink = data.drinks[0];
-        console.log(myDrink.strDrink);
-        console.log(myDrink.strDrinkThumb);
-        console.log(myDrink.strInstructions);
         let count = 1;
         let ingredients = [];
+
         for (let i in myDrink) {
           let ingredient = '';
           let measure = '';
@@ -43,14 +41,14 @@ let getDrink = () => {
             <p> ${myDrink.strInstructions}</p>`;
         let ingredientsCon = document.querySelector('.ingredients');
         ingredients.forEach((item) => {
-          let listItem = document.createElement('ul');
+          let listItem = document.createElement('li');
           listItem.innerText = item;
           ingredientsCon.appendChild(listItem);
         });
       }).catch(() => {
-        result.innerHTML = `<h3 class="msg"> Not vaild</h3>`;
+        result.innerHTML = `<h3 class="msg"> Sorry! I'Dont Know This Drink!</h3>`;
       });
   }
 };
-window.addEventListener('load', getDrink);
+// window.addEventListener('load', getDrink);
 searchBtn.addEventListener('click', getDrink);
